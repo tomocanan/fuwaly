@@ -1,0 +1,75 @@
+.wrapper {
+  background-color: lightsteelblue
+}
+.header {
+  background-color: #fffacd;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-left{
+  background-color: lightgreen;
+  width: 300px;
+  padding: 30px;
+}
+
+.header-right{
+  background-color: lightsteelblue;
+  width: 400px;
+  padding: 30px 30px 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.log-in{
+  background-color: lightgreen;
+  width: 100px;
+}
+
+.log-out{
+  background-color: lightsalmon;
+  width: 100px;
+}
+
+.statuses {
+  background-color: lightsalmon;
+  height: calc(100vh - 200px);
+}
+
+.title{
+  background-color: lightgreen;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.titlename{
+  background-color: lightsteelblue;
+  padding: 10px;
+  margin: 10px 50px;
+}
+
+.footer {
+  background-color: lightgreen;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer1{
+  background-color: lightsteelblue;
+  width: 200px;
+}
+.footer2{
+  background-color: lightpink;
+  width: 200px;
+}
+.footer3{
+  background-color: lightsteelblue;
+  width: 200px;
+}
+.footer4{
+  background-color: lightpink;
+  width: 200px;
+}
