@@ -35,6 +35,7 @@
 
 | Column         | Type   | Options     |
 | -------------- | ------ | ----------- |
+| date           | string | null: false |
 | feeling        | string | null: false |
 | sleeping       | string | null: false |
 | happiness      | string | null: false |
