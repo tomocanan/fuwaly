@@ -1,21 +1,24 @@
 .wrapper {
-  background-color: lightsteelblue
+  background-color: white;
 }
 .header {
-  background-color: #fffacd;
+  background-color: #e29399;
   height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .header-left{
-  background-color: lightgreen;
+  font-size: 50px;
   width: 300px;
-  padding: 30px;
 }
 
+/* .logo{
+  width: 230px;
+  height: 100px;
+} */
+
 .header-right{
-  background-color: lightsteelblue;
   width: 400px;
   padding: 30px 30px 10px;
   display: flex;
@@ -23,53 +26,49 @@
 }
 
 .log-in{
-  background-color: lightgreen;
   width: 100px;
 }
 
 .log-out{
-  background-color: lightsalmon;
   width: 100px;
 }
 
 .statuses {
-  background-color: lightsalmon;
   height: calc(100vh - 200px);
 }
 
 .title{
-  background-color: lightgreen;
+  background-color: whitesmoke;
   height: 70px;
   display: flex;
   align-items: center;
 }
 
 .titlename{
-  background-color: lightsteelblue;
   padding: 10px;
   margin: 10px 50px;
 }
 
 .footer {
-  background-color: lightgreen;
+  background-color: #e6c0c0;
   height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .footer1{
-  background-color: lightsteelblue;
+  background-color: whitesmoke;
   width: 200px;
 }
 .footer2{
-  background-color: lightpink;
+  background-color: whitesmoke;
   width: 200px;
 }
 .footer3{
-  background-color: lightsteelblue;
+  background-color: whitesmoke;
   width: 200px;
 }
 .footer4{
-  background-color: lightpink;
+  background-color: whitesmoke;
   width: 200px;
 }

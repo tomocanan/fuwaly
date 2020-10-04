@@ -1,11 +1,19 @@
 <div class="header-left">
-  fuwaly
+<%# <%= image_tag "logogray.png", class:"logo" %>
+  <%= link_to "Fuwaly", "/", class:"logo" %>
 </div>
 <div class="header-right">
+<%# <% if user_signed_in? %>
+  <%# <li><%= link_to current_user.name, edit_user_registration_path, class: "user-name" %> </li>
+  <%# <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %> </li>
+<%# <% else %>
+  <%# <li><%= link_to "ログイン", new_user_session_path, class: "login" %></li>
+  <%# <li><%= link_to "新規登録", new_user_registration_path, class: "sign-up" %></li>
+<%# <% end %>
   <div class="log-in">
-    ログイン
+    <%= link_to "ログイン", "#", class:"login" %>
   </div>
   <div class="log-out">
-  ログアウト
+    <%= link_to "ログアウト", "#", class:"logout" %>
   </div>
 </div>
