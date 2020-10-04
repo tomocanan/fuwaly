@@ -1,0 +1,110 @@
+.wrapper {
+  background-color: white;
+}
+.header {
+  background-color: #e29399;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-left{
+  font-size: 50px;
+  width: 300px;
+  padding-left: 50px;
+}
+
+.logo{
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+/* .logo{
+  width: 230px;
+  height: 100px;
+} */
+
+.header-right{
+  width: 300px;
+  padding: 30px 30px 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.log-in{
+  width: 100px;
+  border: 2px solid whitesmoke;
+  text-align: center;
+}
+
+.login{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.log-out{
+  width: 100px;
+  border: 2px solid whitesmoke;
+  text-align: center;
+}
+
+.logout{
+  text-decoration: none;
+  color: whitesmoke;
+}
+.statuses {
+  height: calc(100vh - 200px);
+}
+
+.title{
+  background-color: whitesmoke;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.titlename{
+  padding: 10px;
+  margin: 10px 50px;
+}
+
+.footer{
+  background-color: #e6c0c0;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.tab{
+  background-color: whitesmoke;
+}
+.footer1{
+  background-color: whitesmoke;
+  width: 20vw;
+  border: 2px solid gray;
+  text-align: center;
+  margin: 20px;
+}
+.footer2{
+  background-color: whitesmoke;
+  width: 20vw;
+  border: 2px solid gray;
+  text-align: center;
+  margin: 20px;
+}
+.footer3{
+  background-color: whitesmoke;
+  width: 20vw;
+  border: 2px solid gray;
+  text-align: center;
+  margin: 20px;
+}
+.footer4{
+  background-color: whitesmoke;
+  width: 20vw;
+  border: 2px solid gray;
+  text-align: center;
+  margin: 20px;
+}
