@@ -53,6 +53,16 @@
   text-decoration: none;
   color: whitesmoke;
 }
+.user-name{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.sign-up{
+  text-decoration: none;
+  color: whitesmoke;
+}
+
 .statuses {
   height: calc(100vh - 200px);
 }
