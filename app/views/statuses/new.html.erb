@@ -1,0 +1,66 @@
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+  </header>
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">今日の体調を入力しましょう</h2>
+    <%= form_with model: @status, local: true do |f| %>
+
+    <%# <%= render "shared/error_messages", model: f.object %>
+  
+    <div class="items-detail">
+      <div class="weight-bold-text">今日の状態</div>
+      <div class="form">
+
+        <div class="weight-bold-text">
+          今日の気分
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:feeling_id, Feeling.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+        
+        <div class="weight-bold-text">
+          日付
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.number_field :date, class: "hoge" %>
+        
+        <div class="weight-bold-text">
+          睡眠の状態
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:sleeping_id, Sleeping.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
+     
+      </div>
+    </div>
+ 
+    <div class="items-detail">
+      <div class="weight-bold-text question-text">
+        <span>今日のお薬</span>
+      </div>
+      <div class="form">
+        <div class="weight-bold-text">
+          服薬状況
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:taking_id, Taking.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+        <div class="weight-bold-text">
+          今日の幸福度
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:happiness_id, Happiness.all, :id, :name, {}, {class:"select-box", id:"item-prefecture"}) %>
+      </div>
+    </div>
+    <div class="sell-btn-contents">
+      <%= f.submit "入力する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+  </div>
+  <% end %>
+
+  <footer class="items-sell-footer">
+    <ul class="menu">
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">フリマ利用規約</a></li>
+      <li><a href="#">特定商取引に関する表記</a></li>
+    </ul>
+  </footer>
+</div>
