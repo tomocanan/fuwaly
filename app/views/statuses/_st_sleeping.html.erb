@@ -3,10 +3,10 @@
   hogeさんのカルテ
   </div>
   <div class="graphname">
-    <div class="feeling">
+    <div class="sleeping">
       <%= link_to "気分指数", statuses_index_path, class:"btn" %>
     </div>
-    <div class="sleeping">
+    <div class="feeling">
       <%= link_to "睡眠の質", looksl_statuses_path, class:"btn" %>
     </div>
     <div class="happiness">
@@ -19,16 +19,6 @@
 </div>
 <div class="main">
   <div class= maingraph>
-  <%= line_chart Status.pluck(:date, :feeling_id), width: '85vw', height: '60vh', max: 5, discrete: true, colors: ["darkgreen", "#999"] %>
+  <%= line_chart Status.pluck(:date, :sleeping_id), width: '85vw', height: '60vh', max: 5, discrete: true, colors: ["lightblue", "#999"] %>
   </div>
 </div>
-
-<%# 
-<%= line_chart [
-  {name: "", data: @status.date},
-  {name: "Series B", data: sleeping_id}
-] %>
-
-<%# <%= line_chart @status.map { |s|
-    {name: s.feeling_id, data: s.feats.pluck(:date, :feeling_id)}
-} %> 
