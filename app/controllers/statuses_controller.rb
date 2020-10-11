@@ -1,5 +1,6 @@
 class StatusesController < ApplicationController
   def index
+    # @satus = Status.all
   end
 
   def new
