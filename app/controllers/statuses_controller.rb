@@ -1,6 +1,7 @@
 class StatusesController < ApplicationController
   def index
     # @satus = Status.all
+    @status = Status.includes(:user)
   end
 
   def looksl
@@ -26,6 +27,6 @@ class StatusesController < ApplicationController
   private
 
   def status_params
-    params.require(:status).permit(:date, :feeling_id, :sleeping_id, :happiness_id, :taking_id)
+    params.require(:status).permit(:date, :feeling_id, :sleeping_id, :happiness_id, :taking_id).merge(user_id: current_user.id)
   end
 end

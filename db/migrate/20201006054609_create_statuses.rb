@@ -6,6 +6,7 @@ class CreateStatuses < ActiveRecord::Migration[6.0]
       t.integer :sleeping_id,          null: false
       t.integer :happiness_id,         null: false
       t.integer :taking_id,            null: false
+      t.references :user, foreign_key: {to_table: :users} 
       t.timestamps
     end
   end
