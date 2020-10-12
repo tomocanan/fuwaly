@@ -1,6 +1,14 @@
 class StatusesController < ApplicationController
   def index
+    # @satus = Status.all
   end
+
+  def looksl
+  end
+
+  def lookhp
+  end
+
 
   def new
     @status = Status.new

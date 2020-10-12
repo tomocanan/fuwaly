@@ -64,19 +64,79 @@
 }
 
 .statuses {
+  background-color: whitesmoke;
   height: calc(100vh - 200px);
+
 }
 
 .title{
-  background-color: whitesmoke;
+  background-color: gainsboro;
   height: 70px;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .titlename{
-  padding: 10px;
+  padding: 15px;
   margin: 10px 50px;
+}
+
+.graphname{
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn{
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
+.feeling{
+  background-color: #e6c0c0;
+  border: 2px solid gray;
+  width: 90px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.sleeping{
+  background-color: #e29399;
+  border: 2px solid gray;
+  width: 90px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.happiness{
+  background-color: #e29399;
+  border: 2px solid gray;
+  width: 90px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.taking{
+  background-color: #e29399;
+  border: 2px solid gray;
+  width: 90px;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.main{
+  background-color: whitesmoke;
+  height: calc(100vh - 270px);
+  display: flex;
+  align-items: center;
+  margin: 0px 5vw;
+}
+
+.maingraph{
+  background-color: whitesmoke ;
 }
 
 .footer{
@@ -88,8 +148,15 @@
 }
 
 .tab{
-  background-color: whitesmoke;
 }
+
+.footer-btn{
+  background-color: whitesmoke;
+  font-size: 16px;
+  color: black;
+  text-decoration: none;
+}
+
 .footer1{
   background-color: whitesmoke;
   width: 20vw;
