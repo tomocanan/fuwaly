@@ -6,7 +6,7 @@
   <header class="items-sell-header">
   </header>
   <div class="items-sell-main"> %>
-    <h2 class="items-sell-title">今日の体調を入力しましょう</h2>
+    <h1 class="title-message">今日の体調を入力しましょう</h1>
     <%= form_with model: @status, local: true do |f| %>
 
     <%# <%= render "shared/error_messages", model: f.object %>
@@ -50,8 +50,8 @@
         </div>
       <%# </div> %>
     <%# </div> %>
-    <div class="sell-btn-contents">
-      <%= f.submit "入力する" ,class:"sell-btn" %>
+    <div class="btn-contents">
+      <%= f.submit "入力する" ,class:"input-btn" %>
       <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
   <%# </div> %>
