@@ -14,6 +14,11 @@
     <%# <div class="items-detail"> %>
       <%# <div class="weight-bold-text">今日の状態</div> %>
       <div class="form">
+        <div class="weight-bold-text">
+          日付
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.date_field :date, class:"select-box" %>
 
         <div class="weight-bold-text">
           今日の気分
@@ -21,14 +26,7 @@
         <%= f.collection_select(:feeling_id, Feeling.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
         
         <div class="weight-bold-text">
-          日付
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.number_field :date, class:"select-box" %>
-        
-        <div class="weight-bold-text">
           睡眠の状態
-
         </div>
         <%= f.collection_select(:sleeping_id, Sleeping.all, :id, :name, {}, {class:"select-box", id:"item-sales-status"}) %>
      
@@ -42,7 +40,6 @@
       <%# <div class="form"> %>
         <div class="weight-bold-text">
           服薬状況
-
         </div>
         <%= f.collection_select(:taking_id, Taking.all, :id, :name, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
         <div class="weight-bold-text">

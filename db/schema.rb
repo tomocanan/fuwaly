@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_10_06_054609) do
 
   create_table "statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "date", null: false
+    t.date "date", null: false
     t.integer "feeling_id", null: false
     t.integer "sleeping_id", null: false
     t.integer "happiness_id", null: false
