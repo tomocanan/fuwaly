@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: 名前
+      status:
+        feeling: 気分指数
+        sleeping: 睡眠の質
+        happiness: 幸福指数
+        taking: 服薬状況
+
+ja:
+  time:
+    formats:
+      default: "%Y/%m/%d"

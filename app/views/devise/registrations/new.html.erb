@@ -7,7 +7,7 @@
 <%= form_with model: @user, url: user_registration_path, class: 'registration-main', local: true do |f| %>
 <div class='form-wrap'>
   
-  <%# <%= render 'shared/error_messages', model: f.object%>
+  <%= render 'statuses/error_messages', model: f.object %>
   <div class="form">
     <div class='weight-bold-text'>
       <label class="form-text">名前</label>

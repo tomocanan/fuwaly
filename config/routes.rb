@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: "statuses#index"
 
   resources :statuses do
+    # member do
     collection do
       get 'looksl'
       get 'lookhp'

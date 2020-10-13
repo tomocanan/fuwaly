@@ -1,6 +1,10 @@
 <div class="title">
   <div class="titlename">
-  hogeさんのカルテ
+  <% if user_signed_in? %>
+  <%= current_user.name + "さんのカルテ" %>
+  <% else %>
+  <%= "ようこそ" %>
+  <% end %>
   </div>
   <div class="graphname">
     <div class="sleeping">
@@ -18,7 +22,11 @@
   </div>
 </div>
 <div class="main">
-  <div class= maingraph>
-  <%= line_chart Status.pluck(:date, :sleeping_id), width: '85vw', height: '60vh', max: 5, discrete: true, colors: ["lightblue", "#999"] %>
-  </div>
+  <% if user_signed_in? %>
+    <div class= maingraph>
+    <%= line_chart @status, width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["lightblue", "#999"] %>
+    </div>
+  <% else %>
+    <%= "まずはログインしましょう" %>
+  <% end %>
 </div>
