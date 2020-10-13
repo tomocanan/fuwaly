@@ -13,4 +13,9 @@ class User < ApplicationRecord
   validates_format_of :password, with: PASSWORD_REGEX
 
   has_many :statuses
+
+  # def self.chart
+  #   order(date: :asc).pluck('date', 'feeling_id').to_h
+  # end
+
 end

@@ -22,10 +22,16 @@
   </div>
 </div>
 <div class="main">
+  <% if user_signed_in? %>
   <div class= maingraph>
-  <%= line_chart Status.limit(30).pluck(:date, :feeling_id), width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["darkgreen", "#999"] %>
+  <%= line_chart @status, width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["darkgreen", "#999"] %>
+  <%# <%= line_chart Status.limit(30).pluck(:date, :feeling_id), width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["darkgreen", "#999"] %>
   <%# <%= line_chart Status.group_by_day(:created_at).pluck(:feeling_id), width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["darkgreen", "#999"] %>
   </div>
+  <% else %>
+  <%= "まずはログインしましょう" %>
+  <% end %>
+  
 </div>
 
 <%# 
