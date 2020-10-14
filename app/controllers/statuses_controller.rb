@@ -1,14 +1,9 @@
 class StatusesController < ApplicationController
-  
-  # def self.chart
-  #   order(date: :asc).pluck('date', 'feeling_id').to_h
-  # end
 
   def index
-    # @satuses = Status.all.order("date DESC")
     if user_signed_in?
     @status = current_user.statuses.includes(:user).order("date ASC").pluck(:date, :feeling_id)
-    end# @statuses = current_user.statuses
+    end
   end
 
   def looksl
@@ -23,8 +18,8 @@ class StatusesController < ApplicationController
     end
   end
 
-
   def new
+    redirect_to action: :index unless user_signed_in?
     @status = Status.new
   end
 
@@ -33,17 +28,15 @@ class StatusesController < ApplicationController
     if @status.valid?
       @status.save
       return redirect_to root_path
-    end
+    else
     render 'new'
+    end
   end
 
   private
-
-  
 
   def status_params
     params.require(:status).permit(:date, :feeling_id, :sleeping_id, :happiness_id, :taking_id).merge(user_id: current_user.id)
   end
 
-  
 end

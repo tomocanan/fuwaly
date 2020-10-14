@@ -4,14 +4,7 @@ class Status < ApplicationRecord
   belongs_to_active_hash :sleeping
   belongs_to_active_hash :happiness
   belongs_to_active_hash :taking
-
-  # with_options numericality: { other_than: 0 } do
-  #   validates :feeling_id
-  #   validates :sleeping_id
-  #   validates :happiness_id
-  #   validates :taking_id
-  # end
-
+  
   validates :date, presence: true
 
   belongs_to :user
