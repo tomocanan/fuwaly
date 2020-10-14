@@ -27,6 +27,8 @@
     <%= line_chart @status, width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["lightblue", "#999"] %>
     </div>
   <% else %>
+  <div class="message-box">
     <%= "まずはログインしましょう" %>
+  </div>
   <% end %>
 </div>

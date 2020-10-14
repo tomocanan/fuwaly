@@ -23,10 +23,12 @@
 </div>
 <div class="main">
   <% if user_signed_in? %>
-  <div class= maingraph>
-  <%= line_chart @status, width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["pink", "#999"] %>
-  </div>
+    <div class= maingraph>
+    <%= line_chart @status, width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["pink", "#999"] %>
+    </div>
   <% else %>
-  <%= "まずはログインしましょう" %>
+    <div class="message-box">
+    <%= "まずはログインしましょう" %>
+    </div>
   <% end %>
 </div>

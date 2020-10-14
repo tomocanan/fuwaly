@@ -23,23 +23,13 @@
 </div>
 <div class="main">
   <% if user_signed_in? %>
-  <div class= maingraph>
-  <%= line_chart @status, width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["darkgreen", "#999"] %>
-  <%# <%= line_chart Status.limit(30).pluck(:date, :feeling_id), width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["darkgreen", "#999"] %>
-  <%# <%= line_chart Status.group_by_day(:created_at).pluck(:feeling_id), width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["darkgreen", "#999"] %>
-  </div>
+    <div class= maingraph>
+    <%= line_chart @status, width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["darkgreen", "#999"] %>
+    </div>
   <% else %>
-  <%= "まずはログインしましょう" %>
+    <div class="message-box">
+    <%= "まずはログインしましょう" %>
+    </div>
   <% end %>
   
 </div>
-
-<%# 
-<%= line_chart [
-  {name: "", data: @status.date},
-  {name: "Series B", data: sleeping_id}
-] %>
-
-<%# <%= line_chart @status.map { |s|
-    {name: s.feeling_id, data: s.feats.pluck(:date, :feeling_id)}
-} %> 

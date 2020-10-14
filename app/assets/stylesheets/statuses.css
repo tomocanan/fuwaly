@@ -20,11 +20,6 @@
   color: black;
 }
 
-/* .logo{
-  width: 230px;
-  height: 100px;
-} */
-
 .header-right{
   width: 300px;
   padding: 30px 30px 10px;
@@ -66,7 +61,6 @@
 .statuses {
   background-color: whitesmoke;
   height: calc(100vh - 200px);
-
 }
 
 .title{
@@ -137,6 +131,14 @@
 
 .maingraph{
   background-color: whitesmoke ;
+}
+
+.message-box{
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: grey;
+  margin: auto;
 }
 
 .footer{
