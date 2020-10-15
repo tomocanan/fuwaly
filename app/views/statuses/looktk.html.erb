@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <div class="header">
+    <%= render "hedder" %>
+  </div>
+
+<div class="medicine-cld">
+  
+  <table>
+  <tbody>
+    <%# <% @statuses.each do |status| %>
+      <%# <tr>
+        <td><%= status.taking_id %></td>
+      <%# </tr> %> %>
+    <%# <% end %> %> %>
+  </tbody>
+</table>
+
+
+  <%= month_calendar do |date| %>
+    <%= date %>
+  <% end %>
+</div>
+
+  <div class="footer">
+    <%= render "footer" %>
+  </div>
+</div>

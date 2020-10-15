@@ -1,0 +1,17 @@
+
+
+<table>
+  <tbody>
+    <% @statuses.each do |status| %>
+      <tr>
+        <td><%= status.taking_id %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= month_calendar do |date| %>
+  <%= date %>
+<% end %>

@@ -141,6 +141,10 @@
   margin: auto;
 }
 
+.medicine-cld{
+  height: calc(100vh - 200px);
+}
+
 .footer{
   background-color: #e6c0c0;
   height: 100px;
@@ -188,4 +192,18 @@
   border: 2px solid gray;
   text-align: center;
   margin: 20px;
+}
+
+.calendar-heading{
+  color: #e29399;
+  font-size: 20px;
+  height: 4vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a{
+  color: #2b2b2b;
+  text-decoration: none
 }

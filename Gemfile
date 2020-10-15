@@ -71,3 +71,5 @@ gem 'chartkick'
 gem 'groupdate'
 
 gem 'rails-i18n'
+
+gem 'simple_calendar', '~> 2.0'

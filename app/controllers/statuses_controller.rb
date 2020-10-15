@@ -18,6 +18,12 @@ class StatusesController < ApplicationController
     end
   end
 
+  def looktk
+    if user_signed_in?
+      @statuses = Status.all
+    end
+  end
+
   def new
     redirect_to action: :index unless user_signed_in?
     @status = Status.new
