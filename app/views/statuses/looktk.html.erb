@@ -7,17 +7,22 @@
   
   <table>
   <tbody>
-    <%# <% @statuses.each do |status| %>
-      <%# <tr>
+    <% @statuses.each do |status| %>
+      <tr>
         <td><%= status.taking_id %></td>
-      <%# </tr> %>
-    <%# <% end %>
+        <td><%= status.start_time %></td>
+      </tr>
+    <% end %>
   </tbody>
-</table>
+  </table>
 
 
-  <%= month_calendar do |date| %>
-    <%= date %>
+  <%= month_calendar events: @statuses do |date, statuses| %>
+    <%= date.day %>
+    <% @statuses.each do |status| %>
+      <div>
+      </div>
+    <% end %>
   <% end %>
 </div>
 

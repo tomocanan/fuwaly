@@ -1,6 +1,6 @@
 class StatusesController < ApplicationController
 
-  def index
+  def index 
     if user_signed_in?
     @status = current_user.statuses.includes(:user).order("date ASC").pluck(:date, :feeling_id)
     end
@@ -20,6 +20,7 @@ class StatusesController < ApplicationController
 
   def looktk
     if user_signed_in?
+      @status = current_user.statuses.includes(:user)
       @statuses = Status.all
     end
   end
@@ -42,7 +43,6 @@ class StatusesController < ApplicationController
   private
 
   def status_params
-    params.require(:status).permit(:date, :feeling_id, :sleeping_id, :happiness_id, :taking_id).merge(user_id: current_user.id)
+    params.require(:status).permit(:date, :feeling_id, :sleeping_id, :happiness_id, :start_time, :taking_id).merge(user_id: current_user.id)
   end
-
 end

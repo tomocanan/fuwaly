@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_10_15_033018) do
     t.integer "feeling_id", null: false
     t.integer "sleeping_id", null: false
     t.integer "happiness_id", null: false
+    t.datetime "start_time"
     t.integer "taking_id", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false

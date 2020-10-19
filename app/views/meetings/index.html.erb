@@ -1,17 +1,58 @@
 
 
-<table>
+<%# <table>
   <tbody>
     <% @statuses.each do |status| %>
-      <tr>
+      <%# <tr>
         <td><%= status.taking_id %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      </tr> %>
+    <%# <% end %>
+  <%# </tbody>
+</table> %> %>
 
 <br>
 
-<%= month_calendar do |date| %>
+<%# <%= month_calendar do |date| %>
+  <%# <%= date %>
+<%# <% end %> %> %> %> %>
+
+
+<%= month_calendar events: @meetings do |date, meetings| %>
   <%= date %>
+
+  <% meetings.each do |meeting| %>
+    <div>
+      <%= meeting.name %>
+      <%= image_tag "Heartbaloons", class:"comment" %>
+    </div>
+  <% end %>
+<% end %>
+
+
+<%# --------------------------------------------- %>
+
+<%# <%= month_calendar(attribute: :created_at, events: @statuses) do |date, statuses| %> %>
+<%= month_calendar(attribute: :created_at, events: @statuses) do |date, statuses| %>
+  <%= date %>
+
+  <% statuses.each do |status| %>
+    <div>
+      <%= status.taking_id %>
+      <%= image_tag "Heartbaloons", class:"comment" %>
+    </div>
+  <% end %>
+<% end %>
+
+
+
+<%# ---------------------- %>
+<%= month_calendar events: @statuses do |date, statuses| %>
+  <%= date.day %>
+
+  <% statuses.each do |status| %>
+    <div>
+      <%= status.taking_id %>
+      <%= image_tag "Heartbaloons", class:"comment" %>
+    </div>
+  <% end %>
 <% end %>
