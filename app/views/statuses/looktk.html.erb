@@ -9,18 +9,23 @@
   <tbody>
     <% @statuses.each do |status| %>
       <tr>
-        <td><%= status.taking_id %></td>
-        <td><%= status.start_time %></td>
+        <%# <td><%= status.taking_id %></td>
+        <%# <td><%= status.start_time %></td>
       </tr>
     <% end %>
   </tbody>
   </table>
 
 
-  <%= month_calendar events: @statuses do |date, statuses| %>
+  <%= month_calendar events: @statuses do |date, status| %>
     <%= date.day %>
-    <% @statuses.each do |status| %>
+    <% status.each do |status| %>
       <div>
+        <% if status.taking_id == 2 %>
+          <%= image_tag "Heartbaloons", class:"baloon" %>
+        <% elsif status.taking_id == 3 %>
+          <%= image_tag "Heartbaloonsbrank", class:"baloon" %>
+        <% end %>
       </div>
     <% end %>
   <% end %>

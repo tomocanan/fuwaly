@@ -22,6 +22,7 @@ class StatusesController < ApplicationController
     if user_signed_in?
       @status = current_user.statuses.includes(:user)
       @statuses = Status.all
+      # status = Status.all
     end
   end
 
