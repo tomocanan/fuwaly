@@ -21,7 +21,6 @@ class StatusesController < ApplicationController
   def looktk
     if user_signed_in?
       @statuses = current_user.statuses.includes(:user)
-      # @statuses = Status.all
     else
       redirect_to root_path
     end

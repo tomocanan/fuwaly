@@ -5,6 +5,7 @@
 
   <h1 class="title-message">今日の体調を入力しましょう</h1>
   <%= form_with model: @status, local: true do |f| %>
+  <%= render "statuses/error_messages", model: f.object %>
 
     <div class="form">
       <div class="weight-bold-text">

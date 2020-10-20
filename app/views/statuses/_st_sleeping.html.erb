@@ -23,9 +23,15 @@
 </div>
 <div class="main">
   <% if user_signed_in? %>
-    <div class= maingraph>
-    <%= line_chart @status, width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["lightblue", "#999"] %>
-    </div>
+    <% if @status.present? %>
+      <div class= maingraph>
+      <%= line_chart @status, width: '85vw', height: '60vh', max: 6, discrete: true, colors: ["lightblue", "#999"] %>
+      </div>
+    <% else %>
+      <div class="message-box">
+      <%= "次に今日の体調をinputしましょう" %>
+      </div>
+    <% end %>
   <% else %>
   <div class="message-box">
     <%= "まずはログインしましょう" %>
