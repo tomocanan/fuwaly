@@ -4,33 +4,22 @@
   </div>
 
 <div class="medicine-cld">
-  
-  <table>
-  <tbody>
-    <% @statuses.each do |status| %>
-      <tr>
-        <%# <td><%= status.taking_id %></td>
-        <%# <td><%= status.start_time %></td>
-      </tr>
-    <% end %>
-  </tbody>
-  </table>
 
   <%= month_calendar events: @statuses do |date, status| %>
     <%= date.day %>
     <% status.each do |status| %>
       <div>
         <% if status.taking_id == 2 %>
-          <%= image_tag "Heartbaloons", class:"baloon" %>
+          <%= image_tag "Heartbaloons", class:"baloon", :size =>'40x40' %>
         <% elsif status.taking_id == 3 %>
-          <%= image_tag "Heartbaloonsbrank", class:"baloon" %>
+          <%= image_tag "Heartbaloonsbrank", class:"baloon", :size =>'40x40' %>
         <% end %>
       </div>
     <% end %>
   <% end %>
 </div>
 
-  <div class="footer">
-    <%= render "footer" %>
+  <div class="btn-contents">
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
   </div>
 </div>

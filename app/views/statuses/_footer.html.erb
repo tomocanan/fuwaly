@@ -1,30 +1,36 @@
 
-<div class="footer1">
-  <%= image_tag "Starhome.png", class:"home" %>
-  <div class="tab">
-    <%= link_to "home", root_path, class:"footer-btn" %>
+<%= link_to root_path do %>
+  <div class="footer-btn">
+    <%= image_tag "Starhome.png", class:"home" %>
+    <div class="tab">
+      home
+    </div>
   </div>
-</div>
+<% end %>
 
-
-<div class="footer2">
-  <%= image_tag "Painting.png", class:"input" %>
-  <div class="tab">
-  <%= link_to "input", new_status_path, class:"footer-btn" %>
+<%= link_to new_status_path do %>
+  <div class="footer-btn">
+    <%= image_tag "Painting.png", class:"input" %>
+    <div class="tab">
+      input
+    </div>
   </div>
-</div>
+<% end %>
 
-
-<div class="footer3">
-  <%= image_tag "Dochearth", class:"comment" %>
-  <div class="tab">
-    <%= link_to "comment", "#", class:"footer-btn" %>
+<%= link_to "#" do %>
+  <div class="footer-btn">
+    <%= image_tag "Dochearth", class:"comment" %>
+    <div class="tab">
+      comment
+    </div>
   </div>
-</div>
+<% end %>
 
-<div class="footer4">
-  <%= image_tag "Tomato.png", class:"news" %>
-  <div class="tab">
-  <%= link_to "news", "#", class:"footer-btn" %>
+<%= link_to "#" do %>
+  <div class="footer-btn">
+    <%= image_tag "Tomato.png", class:"news" %>
+    <div class="tab">
+      news
+    </div>
   </div>
-</div>
+<% end %>
