@@ -6,7 +6,7 @@
   <h1 class="title-message">今日の体調を入力しましょう</h1>
   <%= form_with model: @status, local: true do |f| %>
 
-    <%# <div class="form"> %>
+    <div class="form">
       <div class="weight-bold-text">
         日付
         <span class="indispensable">必須</span>
@@ -27,14 +27,12 @@
         今日の幸福度
       </div>
       <%= f.collection_select(:happiness_id, Happiness.all, :id, :name, {}, {class:"select-box"}) %>
-
-      <%= f.datetime_select :start_time, :date_separator => "-" , class: 'date-box' %>
-
+      
       <div class="weight-bold-text">
         服薬状況
       </div>
       <%= f.collection_select(:taking_id, Taking.all, :id, :name, {}, {class:"select-box"}) %>
-    <%# </div> %>
+    </div>
 
     <div class="btn-contents">
       <%= f.submit "入力する" ,class:"input-btn" %>

@@ -20,19 +20,22 @@ class StatusesController < ApplicationController
 
   def looktk
     if user_signed_in?
-      @status = current_user.statuses.includes(:user)
-      @statuses = Status.all
-      # status = Status.all
+      @statuses = current_user.statuses.includes(:user)
+      # @statuses = Status.all
     end
   end
 
   def new
     redirect_to action: :index unless user_signed_in?
     @status = Status.new
+    
   end
 
   def create
     @status = Status.new(status_params)
+    s = @status.date.to_s
+    @status.start_time = DateTime.parse(s)
+
     if @status.valid?
       @status.save
       return redirect_to root_path
