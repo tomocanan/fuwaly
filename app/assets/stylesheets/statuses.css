@@ -25,6 +25,7 @@
   padding: 30px 30px 10px;
   display: flex;
   justify-content: space-around;
+  font-size: 16px;
 }
 
 .log-in{
@@ -36,6 +37,7 @@
 .login{
   text-decoration: none;
   color: whitesmoke;
+  
 }
 
 .log-out{
@@ -47,6 +49,7 @@
 .logout{
   text-decoration: none;
   color: whitesmoke;
+ 
 }
 .user-name{
   text-decoration: none;
@@ -73,6 +76,7 @@
 .titlename{
   padding: 15px;
   margin: 10px 50px;
+  font-size: 16px;
 }
 
 .graphname{
@@ -141,6 +145,10 @@
   margin: auto;
 }
 
+.medicine-cld{
+  height: calc(100vh - 200px);
+}
+
 .footer{
   background-color: #e6c0c0;
   height: 100px;
@@ -189,3 +197,22 @@
   text-align: center;
   margin: 20px;
 }
+
+.calendar-heading{
+  color: #e29399;
+  font-size: 20px;
+  height: 4vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+a{
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+/* .has-events{
+  background-color: lightblue;
+} */
+

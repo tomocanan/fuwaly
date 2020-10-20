@@ -3,6 +3,7 @@
   font-weight: bold;
   text-align: center;
   color: grey;
+  padding: 20px;
 }
 
 .indispensable {
@@ -28,10 +29,6 @@
   padding-left: 20px;
   border: 1px solid grey;
 }
-/* 
-.question-text {
-  display: flex;
-} */
 
 .img-upload {
   display: flex;
